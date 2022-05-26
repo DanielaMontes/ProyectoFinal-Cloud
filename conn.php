@@ -8,10 +8,10 @@ $db_name = 'mv1';
 //Initializes MySQLi
 $conn = mysqli_init();
 
-//mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
+mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
 // Establish the connection
-mysqli_real_connect($conn, 'https://web-app-cloud.azurewebsites.net', '10.1.0.6@vic', 'vic', 'mv1',3306, NULL, NULL);
+mysqli_real_connect($conn, 'https://web-app-cloud.azurewebsites.net', '10.1.0.6@vic', 'vic', 'mv1',3306, NULL, MYSQLI_CLIENT_SSL);
 
 //If connection failed, show the error
 if (mysqli_connect_errno())
@@ -35,7 +35,7 @@ $numC = $_POST['name="nControl"'];
 
 
 if ($stmt = mysqli_prepare($conn, "INSERT INTO alumnos2 (nombre, apellidoPaterno, apellidoMaterno, numControl) VALUES 
-('nombrecompleto', 'apellidoP', 'apellidoM','nControl')"))
+(?, ?, ?, ?)"))
 {
     mysqli_stmt_bind_param($stmt, 'ssd', $nombreC, $apellidoP, $apellidoM, $numC);
     mysqli_stmt_execute($stmt);
