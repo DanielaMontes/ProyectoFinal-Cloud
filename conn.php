@@ -21,16 +21,16 @@ if (mysqli_connect_errno())
 
 //Create an Insert prepared statement and run it
 
-  $nombreC = $_POST['name="nombrecompleto"'];
+  $nombreC = $_POST['name="nombre"'];
   echo 'Hola1 '. $nombreC;
 
-$apellidoP = $_POST['name="apellidoP"'];
+$apellidoP = $_POST['name="apellidoPaterno"'];
   echo 'Hola2 '. $apellidoP;
 
-$apellidoM = $_POST['name="apellidoM"'];
+$apellidoM = $_POST['name="apellidoMaterno"'];
   echo 'Hola3 '. $apellidoM;
 
-$numC = $_POST['name="nControl"'];
+$numC = $_POST['name="numControl"'];
   echo 'Hola4 '. $numC;
 
 
