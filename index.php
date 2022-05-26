@@ -11,7 +11,7 @@
 	<script src="js/material.min.js"></script>
 </head>
 <body style="background-image: url(https://fondosmil.com/fondo/58747.jpg);">
-	<p style="color: white; margin-left: 7%; font-size: 100px; position: absolute; margin-top: -150px;">WELCOME</p>
+	<p style="color: white; margin-left: 7%; font-size: 100px; position: absolute; margin-top: -150px;">Bienvenido</p>
     <div style="width: 610px; height: 420px; background-color: rgba(255, 255, 255, 0.853); margin-top: 190px;
 	margin-left: 65px; border-radius: 15px; font-family: Arial, Helvetica, sans-serif; position: static;">
 
