@@ -23,6 +23,6 @@ if (mysqli_connect_errno()) {
 
 
 //HACEMOS QUE LOS CARACTERES SE VEAN TODOS (UTF8)
-mysqli_set_charset($enlace,"https://web-app-cloud.azurewebsites.net");
+mysqli_set_charset($enlace,"https://github.com/DanielaMontes/ProyectoFinal-Cloud");
 
 ?>
