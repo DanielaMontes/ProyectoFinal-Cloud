@@ -1,5 +1,5 @@
 <?php
-echo 'hola mundo'
+
 $host = 'https://web-app-cloud.azurewebsites.net';
 $username = '10.1.0.6@vic';
 $password = 'contra123.';
@@ -42,6 +42,6 @@ if ($stmt = mysqli_prepare($conn, "INSERT INTO alumnos2 (nombre, apellidoPaterno
     mysqli_stmt_close($stmt);
 }
 
-
+echo 'hola mundo'.$nombreC 
 
 ?>
