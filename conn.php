@@ -34,7 +34,8 @@ $numC = $_POST['name="nControl"'];
  //echo 'Hola4 '. $numC;
 
 
-if ($stmt = mysqli_prepare($conn, "INSERT INTO alumnos2 (nombre, apellidoPaterno, apellidoMaterno, numControl) VALUES (nombrecompleto, apellidoP, apellidoM,nControl)"))
+if ($stmt = mysqli_prepare($conn, "INSERT INTO alumnos2 (nombre, apellidoPaterno, apellidoMaterno, numControl) VALUES 
+('nombrecompleto', 'apellidoP', 'apellidoM','nControl')"))
 {
     mysqli_stmt_bind_param($stmt, 'ssd', $nombreC, $apellidoP, $apellidoM, $numC);
     mysqli_stmt_execute($stmt);
