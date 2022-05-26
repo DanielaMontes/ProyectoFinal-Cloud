@@ -25,5 +25,5 @@ if(isset($_POST['register'])) {
         }
     }
 
-echo 'hola mundo'
+
 ?>
