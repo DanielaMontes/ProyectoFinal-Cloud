@@ -11,7 +11,7 @@ $conn = mysqli_init();
 //mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
 // Establish the connection
-mysqli_real_connect($conn, 'https://web-app-cloud.azurewebsites.net', 'localhost@root', 'contra123.', 'mv1', NULL, MYSQLI_CLIENT_SSL);
+mysqli_real_connect($conn, 'https://web-app-cloud.azurewebsites.net', '10.1.0.6@vic', 'vic', 'mv1', NULL, NULL);
 
 //If connection failed, show the error
 if (mysqli_connect_errno())
@@ -21,17 +21,17 @@ if (mysqli_connect_errno())
 
 //Create an Insert prepared statement and run it
 
-  $nombreC = $_POST['name="nombre"'];
-  echo 'Hola1 '. $nombreC;
+  $nombreC = $_POST['name="nombrecompleto"'];
+  //echo 'Hola1 '. $nombreC;
 
-$apellidoP = $_POST['name="apellidoPaterno"'];
-  echo 'Hola2 '. $apellidoP;
+$apellidoP = $_POST['name="apellidoP"'];
+ // echo 'Hola2 '. $apellidoP;
 
-$apellidoM = $_POST['name="apellidoMaterno"'];
-  echo 'Hola3 '. $apellidoM;
+$apellidoM = $_POST['name="apellidoM"'];
+ // echo 'Hola3 '. $apellidoM;
 
-$numC = $_POST['name="numControl"'];
-  echo 'Hola4 '. $numC;
+$numC = $_POST['name="nControl"'];
+ //echo 'Hola4 '. $numC;
 
 
 if ($stmt = mysqli_prepare($conn, "INSERT INTO alumnos2 (nombre, apellidoPaterno, apellidoMaterno, numControl) VALUES (?, ?, ?,?)"))
