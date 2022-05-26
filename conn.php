@@ -11,7 +11,7 @@ $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
 // Establish the connection
-mysqli_real_connect($conn, '10.1.0.6', '10.1.0.6@vic', 'vic', 'mv1',3306, NULL, MYSQLI_CLIENT_SSL);
+mysqli_real_connect($conn, '10.1.0.6', '10.1.0.6@vic', 'vic', 'mv1',3306);
 
 //If connection failed, show the error
 if (mysqli_connect_errno())
