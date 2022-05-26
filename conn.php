@@ -1,28 +1,18 @@
-<?php
+$host = 'https://web-app-cloud.azurewebsites.net';
+$username = 'localhost@root';
+$password = 'contra123.';
+$db_name = 'mv1';
 
-$mysql_host = "localhost";
+//Initializes MySQLi
+$conn = mysqli_init();
 
-//----------------------------------------------------------------
-//CAMBIA LOS SIGUIENTES DATOS DE CONEXIÓN A LA BD POR LOS TUYOS
-$mysql_usuario = "root";
-$mysql_passwd = "contra123.";
-//----------------------------------------------------------------
+mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
 
-//CREA LA SIGUIENTE BASE DE DATOS EN MYSQL
-$mysql_bd = "mv1";
+// Establish the connection
+mysqli_real_connect($conn, 'mydemoserver.mysql.database.azure.com', 'myadmin@mydemoserver', 'yourpassword', 'quickstartdb', 3306, NULL, MYSQLI_CLIENT_SSL);
 
-
-
-$enlace = mysqli_connect($mysql_host, $mysql_usuario, $mysql_passwd, $mysql_bd);
-
-/* comprobar la conexión */
-if (mysqli_connect_errno()) {
-    printf("Falló la conexión: %s\n", mysqli_connect_error());
-    exit();
+//If connection failed, show the error
+if (mysqli_connect_errno())
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-
-
-//HACEMOS QUE LOS CARACTERES SE VEAN TODOS (UTF8)
-mysqli_set_charset($enlace,"https://github.com/DanielaMontes/ProyectoFinal-Cloud");
-
-?>
