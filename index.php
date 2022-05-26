@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Web App</title>
+	<title>Web App Final</title>
 	<link rel="stylesheet" href="css/material.min.css">
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/SendForm.js"></script>
