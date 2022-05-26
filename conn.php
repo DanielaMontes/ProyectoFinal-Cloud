@@ -1,7 +1,7 @@
 <?php
 echo 'hola mundo'
 $host = 'https://web-app-cloud.azurewebsites.net';
-$username = 'localhost@root';
+$username = '10.1.0.6@vic';
 $password = 'contra123.';
 $db_name = 'mv1';
 
