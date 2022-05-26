@@ -2,7 +2,7 @@
 echo 'hola mundo'
 $host = 'https://web-app-cloud.azurewebsites.net';
 $username = '10.1.0.6@vic';
-$password = 'vic';
+$password = 'contra123.';
 $db_name = 'mv1';
 
 //Initializes MySQLi
